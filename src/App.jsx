@@ -6,6 +6,27 @@ import './App.css'
 const URL = 'https://pokeapi.co/api/v2/pokemon?limit=12'
 
 
+
+function shuffleArray(array) {
+  let currentIndex = array.length;
+  let randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex !== 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+
+  return array;
+}
+
 function App() {
   const [pokemonData, setPokemonData] = useState([])
   const [guesses, setGuesses] = useState([])
@@ -38,26 +59,6 @@ useEffect(() => {
 
   fetchPokemonData(URL);
 }, []);
-
-function shuffleArray(array) {
-  let currentIndex = array.length;
-  let randomIndex;
-
-  // While there remain elements to shuffle.
-  while (currentIndex !== 0) {
-    // Pick a remaining element.
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
-    ];
-  }
-
-  return array;
-}
 
 
   function handleGuess(guess) {
