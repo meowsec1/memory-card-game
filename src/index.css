@@ -66,3 +66,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.game-data-bar {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}

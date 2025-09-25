@@ -1,8 +1,8 @@
 import '../styles/Card.css';
 
-export default function Card({pokemonData}) {
+export default function Card({ pokemonData, onClick }) {
     return (
-        <div className="card">
+        <div className="card" onClick={onClick}>
             <img src={pokemonData.image}/>
             {pokemonData.name}
         </div>
