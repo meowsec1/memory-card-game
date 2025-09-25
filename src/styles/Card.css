@@ -1,0 +1,15 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-size: 24px;
+    background-color: paleturquoise;
+    border: 2px solid black;
+    width: 265px;
+    height: 265px
+}
+
+img {
+    object-fit: cover;
+
+}
